@@ -7,6 +7,12 @@
 
 ![Mercury to Metal](docs/assets/media-generation-hero-mercury-metal-0-1a2ae89a-d6f1-4ae9-b683-6d7b5012803c.webp)
 
+[![License](https://img.shields.io/badge/license-Sovereign--Leviathan--SL--AGPL3--001-blue.svg)](LICENSE)
+[![Mercury](https://img.shields.io/badge/Mercury-22.01.9-orange.svg)](https://mercurylang.org)
+[![OpenQASM](https://img.shields.io/badge/OpenQASM-3.0-cyan.svg)](specifications/interchange/QASM_SUBSET.md)
+[![Lines](https://img.shields.io/badge/Mercury-2992_lines-brightgreen.svg)](compiler/src/)
+[![Tests](https://img.shields.io/badge/tests-passing-green.svg)](tests/)
+
 ### Mercury in. OpenQASM out. Metal next.
 
 Most quantum compilers are written in Python. They sit on top of layers of abstraction, frameworks, and dependencies. They work — until they don't. Until the version pins break. Until the framework changes. Until you're debugging someone else's stack instead of your circuits.
@@ -37,6 +43,31 @@ When you're emitting instructions for a quantum device or an FPGA, you don't wan
 ## The Pipeline
 
 ![Pipeline](docs/assets/media-generation-pipeline-diagram-0-15d3d9cd-11ad-46b8-b9da-a5e04a4974d9.webp)
+
+```mermaid
+flowchart LR
+    A[".mqc source"] --> B["lexer"]
+    B --> C["parser"]
+    C --> D["validate"]
+    D --> E["optimize"]
+    E --> F["OpenQASM 3"]
+    F --> G["HARDWARE"]
+    C --> H["circuit IR"]
+    H --> D
+    H --> I["statevector"]
+    I --> J["test"]
+```
+
+```mermaid
+flowchart TD
+    A["Mercury Source"] --> B{"Valid?"}
+    B -->|Yes| C["Optimize"]
+    B -->|No| D["Diagnostics"]
+    C --> E["Emit OpenQASM 3"]
+    E --> F["Roundtrip Check"]
+    F -->|Match| G["Hardware Ready"]
+    F -->|Mismatch| H["Error"]
+```
 
 ```
 .mqc source
@@ -105,7 +136,11 @@ make test
 
 ---
 
-## Example
+## Demo
+
+### Compile a Bell state
+
+![Bell Compile Demo](docs/assets/media-generation-demo-terminal-bell-0-89e3fbf6-3760-4c04-8488-497b6fc0cccf.webp)
 
 Input (`.mqc`):
 
@@ -131,6 +166,25 @@ measure q -> c;
 ```
 
 Feed that to hardware. Done.
+
+### Braid algebra tests
+
+![Braid Tests](docs/assets/media-generation-demo-braid-test-0-71a509cc-44c8-4e58-bb4a-f7b8afe06f9d.webp)
+
+```mermaid
+flowchart TD
+    A["Braid Word"] --> B["Generators σ₁ σ₂ ..."]
+    B --> C["Braid Relations"]
+    C --> D["Burau Representation"]
+    D --> E["Matrix over Laurent Polynomials"]
+    E --> F["Verify"]
+```
+
+Braid words, Burau representation, braid relations — all verified in Mercury.
+
+---
+
+## Example
 
 ---
 
