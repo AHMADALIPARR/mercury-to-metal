@@ -1,0 +1,15 @@
+# Mercury build products
+Mercury/
+*.int
+*.int2
+*.int3
+*.d
+*.err
+compiler/src/*.c
+compiler/src/mercury_qc
+compiler/bin/
+tests/algebraic/build/
+*.date
+*.date3
+*.mh
+*.cm
