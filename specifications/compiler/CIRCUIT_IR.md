@@ -1,3 +1,8 @@
+<!-- SPDX-License-Identifier: LicenseRef-Sovereign-Leviathan-SL-AGPL3-001 -->
+<!-- Copyright (c) 2026 Ahmad Ali Parr. All rights reserved. -->
+<!-- Authored by Ahmad Ali Parr. -->
+<!-- Licensed under the SNAPKITTY OPAQUE SOURCE LICENSE v1.0. See LICENSE. -->
+
 # Circuit IR (v0)
 
 The IR is the single internal representation. OpenQASM 3 is an output format only.

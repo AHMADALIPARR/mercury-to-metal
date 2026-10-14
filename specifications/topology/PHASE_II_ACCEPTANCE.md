@@ -1,3 +1,8 @@
+<!-- SPDX-License-Identifier: LicenseRef-Sovereign-Leviathan-SL-AGPL3-001 -->
+<!-- Copyright (c) 2026 Ahmad Ali Parr. All rights reserved. -->
+<!-- Authored by Ahmad Ali Parr. -->
+<!-- Licensed under the SNAPKITTY OPAQUE SOURCE LICENSE v1.0. See LICENSE. -->
+
 # Phase II Acceptance: Braid Algebra
 
 Status: **PARTIAL.** Symbolic braid algebra and Burau checks are accepted for the

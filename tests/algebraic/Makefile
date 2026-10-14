@@ -1,3 +1,8 @@
+# SPDX-License-Identifier: LicenseRef-Sovereign-Leviathan-SL-AGPL3-001
+# Copyright (c) 2026 Ahmad Ali Parr. All rights reserved.
+# Authored by Ahmad Ali Parr.
+# Licensed under the SNAPKITTY OPAQUE SOURCE LICENSE v1.0. See LICENSE.
+
 # Algebraic tests for topology/braid. Requires mmc on PATH.
 #
 # mmc --make only finds sources in the current directory, so the module under

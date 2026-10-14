@@ -1,3 +1,8 @@
+# SPDX-License-Identifier: LicenseRef-Sovereign-Leviathan-SL-AGPL3-001
+# Copyright (c) 2026 Ahmad Ali Parr. All rights reserved.
+# Authored by Ahmad Ali Parr.
+# Licensed under the SNAPKITTY OPAQUE SOURCE LICENSE v1.0. See LICENSE.
+
 // Bell state, measured. Expect (|00> + |11>)/sqrt(2) before measurement.
 qubit[2] q;
 bit[2] c;

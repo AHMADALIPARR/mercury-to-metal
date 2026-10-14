@@ -1,3 +1,8 @@
+# SPDX-License-Identifier: LicenseRef-Sovereign-Leviathan-SL-AGPL3-001
+# Copyright (c) 2026 Ahmad Ali Parr. All rights reserved.
+# Authored by Ahmad Ali Parr.
+# Licensed under the SNAPKITTY OPAQUE SOURCE LICENSE v1.0. See LICENSE.
+
 // Adjacent rotations on the same axis and operands fuse by angle addition.
 qubit[2] q;
 rz(0.3) q[0];
