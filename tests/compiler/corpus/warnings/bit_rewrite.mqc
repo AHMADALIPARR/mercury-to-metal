@@ -1,0 +1,6 @@
+// expect-warning: W-BIT-REWRITE
+// Valid circuit; the second measurement into c[0] is reported as a warning.
+qubit[1] q;
+bit[1] c;
+c[0] = measure q[0];
+c[0] = measure q[0];

@@ -1,0 +1,3 @@
+// expect: E-OPERANDS
+qubit[2] q;
+cx q[1], q[1];

@@ -1,0 +1,4 @@
+// expect: E-BROADCAST
+qubit[2] a;
+qubit[3] b;
+cx a, b;

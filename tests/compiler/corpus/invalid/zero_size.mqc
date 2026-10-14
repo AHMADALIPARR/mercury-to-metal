@@ -1,0 +1,2 @@
+// expect: E-SIZE
+qubit[0] q;

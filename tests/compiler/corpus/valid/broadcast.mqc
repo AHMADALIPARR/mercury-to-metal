@@ -1,0 +1,7 @@
+// Whole-register broadcast: single-qubit, reset, barrier, pairwise measure.
+qubit[3] q;
+bit[3] c;
+h q;
+barrier q;
+c = measure q;
+reset q;

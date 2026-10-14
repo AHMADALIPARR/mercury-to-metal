@@ -1,0 +1,2 @@
+// expect: E-UNDECLARED
+h q[0];

@@ -1,0 +1,2 @@
+// expect: E-UNSUPPORTED
+gate foo a { h a; }

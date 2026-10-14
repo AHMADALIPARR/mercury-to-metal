@@ -1,0 +1,9 @@
+// Adjacent rotations on the same axis and operands fuse by angle addition.
+qubit[2] q;
+rz(0.3) q[0];
+rz(0.4) q[0];
+rx(-1.25) q[1];
+rx(0.25) q[1];
+cp(pi/4) q[0], q[1];
+cp(pi/4) q[1], q[0];
+rz(0) q[1];

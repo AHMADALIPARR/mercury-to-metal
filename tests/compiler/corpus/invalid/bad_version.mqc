@@ -1,0 +1,3 @@
+// expect: E-UNSUPPORTED
+OPENQASM 2.0;
+qubit[1] q;

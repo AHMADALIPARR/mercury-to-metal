@@ -1,0 +1,3 @@
+// expect: E-DUPLICATE
+qubit[2] q;
+qubit[3] q;
