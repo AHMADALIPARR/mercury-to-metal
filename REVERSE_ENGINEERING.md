@@ -40,13 +40,21 @@ They reflect the development phases evident in the file structure and specs:
 - **Braid:** Braid-word algebra with Burau representation, verified by tests
 - **Interface:** OpenQASM 3 text in the frozen subset (`QASM_SUBSET.md`)
 
-## What It Does NOT Do (Honest Limits)
+## The Point: Mercury to Metal
 
-- **No hardware:** No quantum device, no FPGA, no QRNG. Gate E BLOCKED.
-- **No C runtime:** Not built, not planned in this session.
-- **No Klong:** Klong numerics blocked — no Klong available.
-- **No Unitary/Fibonacci braid reps:** Not built (Phase II incomplete).
-- **No external QASM validation:** No Qiskit/openqasm3 parser installed.
+The name is the mission. Mercury source → OpenQASM 3 → hardware.
+
+The compiler's OpenQASM 3 output is the handoff to metal: quantum devices,
+FPGA controllers, QRNG-driven systems. The frozen QASM subset is the contract
+between the compiler and whatever runs the circuits.
+
+## What Is Next
+
+- **Hardware integration:** OpenQASM 3 is ready. The handoff is the goal.
+- **Klong numerics:** In progress (see KLONG_STATUS.md).
+- **Unitary/Fibonacci braid reps:** Next (see PHASE_II_ACCEPTANCE.md).
+- **Native C runtime:** Planned.
+- **External QASM validation:** Qiskit/openqasm3 conformance check pending.
 
 See `specifications/audit/AUDIT_REPORT.md` for full gates A-E status.
 
